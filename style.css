@@ -184,7 +184,7 @@ main {
 }
 
 .little-pictures img {
-    width: 50% !important;
+    width: 50%;
     object-fit: contain;
     overflow: hidden;
 }
@@ -195,6 +195,10 @@ main {
 
 .news {
     flex: 1;
+}
+
+article {
+    margin-bottom: 15px;
     display: flex;
     gap: 5px;
     flex-direction: column;
@@ -284,8 +288,42 @@ main {
 }
 
 .more-article a svg {
+    width: 10px;
     position: absolute;
     right: 0;
     top: 50%;
     transform: translateY(-50%);
+}
+
+.more-games a,
+.more-games svg {
+    color: var(--nintendo-red);
+    fill: var(--nintendo-red);
+}
+
+@media screen and (max-width: 850px) {
+    main {
+        flex-direction: column;
+    }
+    main img {
+        width: 100%!important;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    main {
+        margin-left: 0;
+    }
+    main * {
+        flex-direction: column;
+    }
+    main img {
+        width: 100%!important;
+        max-height: 70vh;
+        object-fit: cover;
+    }
+    nav,
+    aside {
+        display: none!important;
+    }
 }
