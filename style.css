@@ -4,6 +4,7 @@
     --nintendo-white: white;
     --nintendo-font: 'Open Sans', sans-serif;
     --nintendo-dark-red: #BF0010;
+    --nintendo-darker-red: #5e0008;
     --nintendo-bg-color: rgb(238, 238, 238);
     --nintendo-font-color: black;
 }
@@ -93,7 +94,7 @@ aside a::before {
     right: 0;
     border-style: solid;
     border-width: 0 10px 10px 0;
-    border-color: transparent #5e0008 transparent transparent
+    border-color: transparent var(--nintendo-darker-red) transparent transparent
 }
 
 aside a:nth-child(7) {
@@ -319,7 +320,7 @@ article {
     }
     main img {
         width: 100%!important;
-        max-height: 70vh;
+        max-height: calc(100vh - 90px);
         object-fit: cover;
     }
     nav,
